@@ -1,0 +1,274 @@
+body {
+  background: #e7e7e7;
+}
+
+.row {
+  position: relative;
+  width: 700px;
+  height: 600px;
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+.window {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 300px;
+  background: linear-gradient(90deg, rgba(87,201,82,1) 0%, rgba(57,43,172,1) 100%);
+}
+
+.left {
+  top: 50%;
+  left: 0px;
+  animation-name: left;
+  animation-duration: 8s;
+  animation-iteration-count: 1;
+  z-index: 0;
+  margin: auto 0px;
+}
+
+.center {
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+  transform: translate(-50%, 0%);
+  z-index: 1;
+  animation-name: center;
+  animation-duration: 8s;
+  animation-iteration-count: 1;
+  margin: auto 0px;
+}
+
+.right {
+  top: 50%;
+  right: 0px;
+  animation-name: right;
+  animation-duration: 8s;
+  animation-iteration-count: 1;
+  z-index: 0;
+  margin: auto 0px;
+}
+
+.wrapper_center {
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -17%);
+  animation-name: wrapper;
+  animation-duration: 10s;
+  animation-iteration-count: 1;
+  border: 1px solid #000;
+}
+
+@keyframes left {
+  0% {
+    transform: translateY(500px);
+    padding-bottom: 200px;
+  }
+
+  10% {
+    transform: translateY(0px);
+    padding-bottom: 200px;
+  }
+
+  20% {
+    padding-bottom: 0px;
+  }
+
+  35% {
+    transform: translateX(0px);
+  } 
+
+  45% {
+    transform: translateX(250px);
+  }
+
+  60% {
+    transform: translateX(250px);
+  }
+
+  65% {
+    transform: translateX(0px);
+  }
+
+  70% {
+    transform: translateY(0px);
+    padding-top: 0px;
+  }
+
+  /* 75% {
+    transform: translateY(0px);
+    padding-top: 500px;
+  } */
+
+  80% {
+    transform: translateY(-500px);
+    padding-top: 500px;
+  }
+
+  85% {
+    transform: translateY(-1000px);
+    padding-top: 500px;
+  }
+
+  100% {
+    transform: translateY(-1000px);
+  }
+}
+
+@keyframes center {
+  0% {
+    padding-bottom: 200px;
+    transform: translate(-50%, 500px);
+  }
+
+  5% {
+    transform: translate(-50%, 500px);
+  }
+
+  15% {
+    padding-bottom: 200px;
+    transform: translate(-50%, 0px);
+  }
+
+  25% {
+    padding-bottom: 0px;
+  }
+
+  35% {
+    width: 200px;
+    height: 200px;
+    transform: translate(-50%, 0%);
+  } 
+
+  45% {
+    width: 400px;
+    height: 400px;
+    transform: translate(-50%, -25%);
+  }
+
+  55%{
+    width: 350px;
+    height: 350px;
+  }
+
+  60%{
+    width: 400px;
+    height: 400px;
+    transform: translate(-50%, -25%);
+  }
+
+  65%{
+    width: 200px;
+    height: 200px;
+    transform: translate(-50%, 0%);
+  }
+
+  70% {
+    transform:translate(-50%, 0%);
+    padding-top: 0px;
+  }
+
+
+  80% {
+    transform:translate(-50%, -500px);
+    padding-top: 500px;
+  }
+
+  85% {
+    transform:translate(-50%, -1000px);
+    padding-top: 500px;
+  }
+
+  100% {
+    transform: translate(-50%, -1000px);
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* 
+@keyframes wrapper {
+  0% {
+    transform: translate(-50%, 500px);
+  }
+
+  5% {
+    transform: translate(-50%, 500px);
+  }
+
+  15% {
+    transform: translate(-50%, -17%);
+  }
+
+  100% {
+  }
+} */
+
+@keyframes right {
+  0%{
+    transform: translateY(500px);
+    padding-bottom: 200px;
+  }
+
+  10%{
+    transform: translateY(500px);
+    padding-bottom: 200px;
+  }
+
+  20% {
+    transform: translateY(0px);
+    padding-bottom: 200px;
+  }
+
+  30% {
+    padding-bottom: 0px;
+  }
+
+  35% {
+    transform: translateX(0px);
+  } 
+
+  45% {
+    transform: translateX(-250px);
+  }
+
+  60% {
+    transform: translateX(-250px);
+  }
+
+  65% {
+    transform: translateX(0px);
+  }
+
+  70% {
+    transform: translateY(0px);
+    padding-top: 0px;
+  }
+
+  /* 75% {
+    transform: translateY(0px);
+    padding-top: 500px;
+  } */
+
+  80% {
+    transform: translateY(-500px);
+    padding-top: 500px;
+  }
+
+  85% {
+    transform: translateY(-1000px);
+    padding-top: 500px;
+  }
+
+  100% {
+    transform: translateY(-1000px);
+  }
+}
